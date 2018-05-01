@@ -40,7 +40,15 @@ module.exports = {
       }
     ],
   },
-  plugins: [new CopyWebpackPlugin([{ from: { glob: './src/public/index.html', dot: true }, to: '[name].[ext]' }])],
+  plugins: [
+    new CopyWebpackPlugin([{ from: { glob: './src/public/index.html', dot: true }, to: '[name].[ext]' }]),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default']
+    })
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
