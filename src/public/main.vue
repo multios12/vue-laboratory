@@ -1,14 +1,16 @@
 <template>
-    <main role="main" class="container">
-      <alert-message :message="alertMessage" v-on:close="alertMessage = ''"></alert-message>
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <hr>
-        <button @click="show" class="btn btn-primary">メッセージの表示</button>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <alert-message :message="alertMessage" v-on:close="alertMessage = ''"></alert-message>
+        <div class="starter-template">
+          <h1>アラート</h1>
+          <p class="lead">アラートメッセージの表示・非表示</p>
+          <hr>
+          <button @click="show" class="btn btn-primary">メッセージの表示</button>
+        </div>
       </div>
-
-    </main><!-- /.container -->
+      <div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab">...</div>
+    </div>
 </template>
 
 <script>
