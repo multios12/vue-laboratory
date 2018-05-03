@@ -1,16 +1,12 @@
 <template>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <alert-message :message="alertMessage" v-on:close="alertMessage = ''"></alert-message>
-        <div class="starter-template">
-          <h1>アラート</h1>
-          <p class="lead">アラートメッセージの表示・非表示</p>
-          <hr>
-          <button @click="show" class="btn btn-primary">メッセージの表示</button>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab">...</div>
-    </div>
+  <div class="container" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <alert-message :message="alertMessage" v-on:close="alertMessage = ''"></alert-message>
+
+    <h1>アラート</h1>
+    <p class="lead">アラートメッセージの表示・非表示</p>
+    <button @click="show" class="btn btn-primary">メッセージの表示</button>
+    <br>
+  </div>
 </template>
 
 <script>
@@ -31,6 +27,7 @@ export default {
   }
 };
 Vue.component("alert-message", alertComponent);
+
 </script>
 
 <style>

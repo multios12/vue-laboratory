@@ -1,5 +1,5 @@
 <template>
-    <div class="alert alert-danger" :class="{'alert-hide': isHide}" role="alert" id="message" @click="closeMessage">
+    <div class="alert alert-danger center-block" :class="{'alert-hide': isHide}" role="alert" id="message" @click="closeMessage">
         <button type="button" class="close" data-dismiss="alert" aria-label="閉じる" @click="closeMessage">
             <span aria-hidden="true">×</span>
         </button>

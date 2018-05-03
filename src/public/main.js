@@ -10,13 +10,19 @@ import faSolid from '@fortawesome/fontawesome-free-solid'
 
 import navbarComponent from './navbar.vue'
 import mainComponent from './main.vue'
+import listComponent from './list.vue'
+import formComponent from './form.vue'
 
-new Vue(
+var app = new Vue(
   {
     el: '#app',
     components: {
       "app-nav": navbarComponent,
-      "app-main": mainComponent
+      "app-main": mainComponent,
+      "app-list": listComponent,
+      "app-form": formComponent
     }
   }
 )
+// app.component('app-nav', navbarComponent)
+// app.component('app-main', mainComponent)
