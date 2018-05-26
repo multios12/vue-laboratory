@@ -1,8 +1,7 @@
 var createError = require('http-errors');
-import express, { NextFunction } from 'express';
 import compression from "compression";
-var path = require('path');
-var cookieParser = require('cookie-parser');
+import express from 'express';
+import path from 'path';
 var logger = require('morgan');
 
 var app = express();
@@ -21,7 +20,6 @@ if (app.get('env') == 'development') {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../sample')));
 app.use(express.static(path.join(__dirname, 'public')));
 

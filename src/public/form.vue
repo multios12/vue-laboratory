@@ -1,14 +1,12 @@
 <template>
-    <div class="container">
+    <b-container>
         <h1>フォーム入力</h1>
-        <label for="title">タイトル</label>
-        <input class="form-control" v-model="title" id="title" placeholder="タイトル" />
-        <input class="form-check-input" type="checkbox" id="selectData" v-model="selectData" />
-        <label class="form-check-label" for="selectData">選択</label>
+        <b-form-group label="タイトル"><b-form-input placeholder="タイトル"></b-form-input></b-form-group>
+        <b-check-group label="選択"><b-form-checkbox></b-form-checkbox></b-check-group>
         <br>
-        <button class="form-control btn btn-primary">送信</button>
+        <b-button variant="primary">送信</b-button>
         <p>Message is: {{ title }}</p>
-    </div>
+    </b-container>
 </template>
 
 <script>

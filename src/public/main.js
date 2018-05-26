@@ -9,6 +9,7 @@ import mainComponent from './main.vue'
 import listComponent from './list.vue'
 import formComponent from './form.vue'
 
+Vue.use(BootstrapVue);
 var app = new Vue(
   {
     el: '#app',
