@@ -1,21 +1,23 @@
 # vue-laboratory
-
 > jue.js + Bootstrapの実験室
 
-## モジュール
+## Modules
 * vue.js
 * Bootstrap4
 * Express
 * fortawesome
 
-## Build Setup
+## Usage
 
 ``` bash
 # 依存モジュールのインストール
 npm install
 
-# ホットリロードサーバ開始 localhost:3000
-npm run dev
+# ウォッチビルド開始
+npm run watch
+
+# プログラム起動
+node .
 
 # リリースビルド実行
 npm run release
